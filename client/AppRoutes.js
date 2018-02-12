@@ -5,8 +5,9 @@ import { Route } from 'react-router-dom'
 import Home from './pages/Home'
 import Season1 from './pages/Season1'
 import Standings from './pages/Standings'
-import Teams from './pages/Teams'
+import TeamsPage from './teams/TeamsPage'
 import Divisions from './pages/Divisions'
+import SingleTeam from './teams/SingleTeam'
 
 const AppRoutes = () => {
   return (
@@ -25,8 +26,12 @@ const AppRoutes = () => {
         component: Standings
       }),
       h(Route, {
+        path: '/Teams/:name',
+        component: () => SingleTeam()
+      }),
+      h(Route, {
         path: '/Teams',
-        component: Teams
+        component: TeamsPage
       }),
       h(Route, {
         path: '/Divisions',
