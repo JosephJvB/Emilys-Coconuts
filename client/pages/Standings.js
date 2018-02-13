@@ -10,7 +10,7 @@ const Standings = () => {
       'im standings',
       h('br'),
       'Im gonna be a lovely table :)',
-      homeButton()
+      h(homeButton)
     ])
   )
 }

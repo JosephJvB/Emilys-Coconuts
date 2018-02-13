@@ -13,7 +13,7 @@ const Season1 = () => {
       h('br'),
       stages.map(s => h('button', { key: s, className: 'button is-large' }, `Stage${s}`)),
       h('br'),
-      homeButton()
+      h(homeButton)
     ])
   )
 }

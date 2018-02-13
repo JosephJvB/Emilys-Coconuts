@@ -1,15 +1,19 @@
 import { Fragment as F } from 'react'
 import h from 'react-hyperscript'
 // import { Link } from 'react-router-dom'
-
 import { homeButton } from '../dumb-components'
 
+const teamData = require('../../data/teams')
+
 const SingleTeam = props => {
-  // console.log(props)
+  const activeTeam = props.match.params.name.replace(/_/g, ' ')
+  // team data is an array, find team where team.name = active team :)
+  const activeInfo = teamData.find(team => team.name === activeTeam)
+  console.log(activeInfo)
   return (
     h(F, [
-      'im a team',
-      homeButton()
+      activeTeam,
+      h(homeButton)
     ])
   )
 }

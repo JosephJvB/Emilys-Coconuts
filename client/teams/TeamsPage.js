@@ -24,7 +24,7 @@ const TeamPage = () => {
       h('div', { className: 'columns' }, [
         row3.map(team => renderTile(team))
       ]),
-      homeButton()
+      h(homeButton)
     ])
   )
 }

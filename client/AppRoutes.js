@@ -29,7 +29,7 @@ const AppRoutes = () => {
         }),
         h(Route, {
           path: '/Teams/:name',
-          component: () => SingleTeam()
+          component: SingleTeam
         }),
         h(Route, {
           path: '/Teams',

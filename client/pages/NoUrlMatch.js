@@ -7,7 +7,7 @@ const NoUrlMatch = () => {
   return (
     h(F, [
       'oops that URL doesnt go anywhere useful!',
-      homeButton()
+      h(homeButton)
     ])
   )
 }

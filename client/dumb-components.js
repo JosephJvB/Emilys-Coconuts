@@ -11,7 +11,7 @@ export const homeButton = () => {
 
 export const renderTile = team => {
   const { logo, name } = team
-  const nameToUrl = name => name.replace(' ', '_')
+  const nameToUrl = name => name.replace(/ /g, '_')
   return (
     h('div', { className: 'column' }, [
       h(Link, { to: `/Teams/${nameToUrl(name)}` }, [

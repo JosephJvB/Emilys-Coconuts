@@ -8,7 +8,7 @@ const Divisions = () => {
   return (
     h(F, [
       'im divisions',
-      homeButton()
+      h(homeButton)
     ])
   )
 }
