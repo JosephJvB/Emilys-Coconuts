@@ -2,15 +2,17 @@ import { Fragment as F } from 'react'
 import h from 'react-hyperscript'
 // import { Link } from 'react-router-dom'
 
-import { homeButton } from '../dumb-components'
+import { homeButton, backButton } from '../dumb-components'
 
-const Standings = () => {
+const Standings = props => {
+  const { goBack } = props.history
   return (
     h(F, [
+      h(backButton, { goBack }),
       'im standings',
+      h(homeButton),
       h('br'),
-      'Im gonna be a lovely table :)',
-      h(homeButton)
+      'Im gonna be a lovely table :)'
     ])
   )
 }

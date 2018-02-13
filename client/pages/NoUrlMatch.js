@@ -1,13 +1,16 @@
 import { Fragment as F } from 'react'
 import h from 'react-hyperscript'
 
-import { homeButton } from '../dumb-components'
+import { homeButton, backButton } from '../dumb-components'
 
-const NoUrlMatch = () => {
+const NoUrlMatch = props => {
+  const { goBack } = props.history
   return (
     h(F, [
       'oops that URL doesnt go anywhere useful!',
-      h(homeButton)
+      h(homeButton),
+      ' OR ',
+      h(backButton, { goBack })
     ])
   )
 }

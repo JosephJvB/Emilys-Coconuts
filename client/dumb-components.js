@@ -9,6 +9,14 @@ export const homeButton = () => {
   )
 }
 
+export const backButton = ({goBack}) => {
+  return (
+    h('button', {
+      onClick: goBack
+    }, 'BACK')
+  )
+}
+
 export const renderTile = team => {
   const { logo, name } = team
   const nameToUrl = name => name.replace(/ /g, '_')
