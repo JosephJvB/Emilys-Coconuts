@@ -2,10 +2,11 @@ import { Fragment as F } from 'react'
 import h from 'react-hyperscript'
 import { Link } from 'react-router-dom'
 
-import styles from '../styles'
+import { container, navRow } from '../styles'
+
+const rowArr = [ 'Season1', 'Standings', 'Teams', 'Divisions' ]
 
 const Home = () => {
-  const { container, navRow } = styles
   return (
     h('div', {
       style: container
@@ -35,6 +36,7 @@ const Home = () => {
           style: navRow
         }, 'Divisions')
       ])
+
     ])
   )
 }
@@ -43,3 +45,17 @@ export default Home
 
 // this page starts off as that main picture, then onclick it renders the nav options:
 // Season 1, Standings, Teams, Divisions
+
+// const renderRow = ({rowArr}) => {
+//   console.log(rowArr)
+//   return (
+//     rowArr.map((row, i) => {
+//       i % 2 ? navRow.backgroundColor = 'blue' : navRow.backgroundColor = 'red'
+//       h(Link, { to: row }, [
+//         h('div', {
+//           style: navRow
+//         }, row)
+//       ])
+//     })
+//   )
+// }
