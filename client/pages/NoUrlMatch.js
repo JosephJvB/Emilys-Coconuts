@@ -1,9 +1,12 @@
 import { Fragment as F } from 'react'
 import h from 'react-hyperscript'
+import { connect as connectFela } from 'react-fela'
+
+import styles from '../styles'
 
 import { homeButton, backButton } from '../dumb-components'
 
-const NoUrlMatch = props => {
+const NoUrlMatch = connectFela(styles)(props => {
   const { goBack } = props.history
   return (
     h(F, [
@@ -13,6 +16,6 @@ const NoUrlMatch = props => {
       h(backButton, { goBack })
     ])
   )
-}
+})
 
 export default NoUrlMatch

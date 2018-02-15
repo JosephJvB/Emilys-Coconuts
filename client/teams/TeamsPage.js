@@ -1,13 +1,15 @@
 import { Fragment as F } from 'react'
 import h from 'react-hyperscript'
 // import { Link } from 'react-router-dom'
+import { connect as connectFela } from 'react-fela'
 
+import styles from '../styles'
 import { homeButton, renderTile, backButton } from '../dumb-components'
 
 const teamData = require('../../data/teams')
 // const w = window.screen.availWidth
 
-const TeamPage = props => {
+const TeamPage = connectFela(styles)(props => {
   const { goBack } = props.history
   const row1 = teamData.slice(0, 4)
   const row2 = teamData.slice(4, 8)
@@ -29,6 +31,6 @@ const TeamPage = props => {
       ])
     ])
   )
-}
+})
 
 export default TeamPage
