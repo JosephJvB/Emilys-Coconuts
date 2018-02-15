@@ -23,3 +23,5 @@ main nav has 4 headings:
 
   Standings is just a single thing so maybe it doesnt need it.
   Seasons is kinda big... idk
+
+  TODO: GO hard in the paint on Fela: that might mean having more than one styles file...jk lol that would require more brainpower AAEEEEIIOOOUUUUU

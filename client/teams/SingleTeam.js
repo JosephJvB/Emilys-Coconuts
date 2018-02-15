@@ -1,21 +1,24 @@
 import { Fragment as F } from 'react'
 import h from 'react-hyperscript'
 // import { Link } from 'react-router-dom'
+import { connect as connectFela } from 'react-fela'
+
+import styles from '../styles'
 import { homeButton, backButton } from '../dumb-components'
 
 const teamData = require('../../data/teams')
 
-const SingleTeam = props => {
+const SingleTeam = connectFela(styles)(props => {
   const { goBack } = props.history
   const activeTeam = props.match.params.name.replace(/_/g, ' ')
   const activeInfo = teamData.find(team => team.name === activeTeam)
   return (
     h(F, [
       h(backButton, { goBack }),
-      activeTeam,
+      activeInfo.name,
       h(homeButton)
     ])
   )
-}
+})
 
 export default SingleTeam

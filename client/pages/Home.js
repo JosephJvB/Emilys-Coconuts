@@ -50,8 +50,7 @@ const Home = connectFela(styles)(props => {
 
     ])
   )
-}
-)
+})
 
 export default Home
 
