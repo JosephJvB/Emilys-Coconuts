@@ -1,11 +1,23 @@
+import { combineRules } from 'fela'
+
+const navRow = () => ({
+  width: '100%',
+  display: 'flex',
+  flexDirection: 'column',
+  padding: '2em'
+})
+
 module.exports = {
   container: () => ({
     textAlign: 'center'
   }),
-  navRow: () => ({
-    width: '100%',
-    display: 'flex',
-    flexDirection: 'column',
+  navRow: combineRules(navRow, () => ({})),
+  darkNavRow: combineRules(navRow, () => ({
+    backgroundColor: 'rgba(218, 222, 229, 0.5)'
+  })),
+  title: () => ({
+    fontSize: '36px',
+    fontWeight: '400',
     padding: '2em'
   })
 }

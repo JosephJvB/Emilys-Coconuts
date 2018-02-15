@@ -11,30 +11,42 @@ const Home = connectFela(styles)(props => {
     h('div', {
       className: styles.container
     }, [
-      'emily\'s ',
-      h('a', {
-        href: 'https://www.figma.com/proto/bbCtb1UyXlZln9AHGRYlShJF/Overwatch-League?scaling=contain&node-id=2%3A0&redirected=1'
-      }, 'coconuts'),
+      h('h1', {
+        className: styles.title
+      }, [
+        'emily\'s ',
+        h('a', {
+          href: 'https://www.figma.com/proto/bbCtb1UyXlZln9AHGRYlShJF/Overwatch-League?scaling=contain&node-id=2%3A0&redirected=1'
+        }, 'coconuts')
+      ]),
       h('br'),
       h(Link, { to: 'Season1' }, [
         h('div', {
-          className: styles.navRow
-        }, 'Season1')
+          className: styles.darkNavRow
+        }, [
+          h('h2', {}, 'Season1')
+        ])
       ]),
       h(Link, { to: 'Standings' }, [
         h('div', {
           className: styles.navRow
-        }, 'Standings')
+        }, [
+          h('h2', {}, 'Standings')
+        ])
       ]),
       h(Link, { to: 'Teams' }, [
         h('div', {
-          className: styles.navRow
-        }, 'Teams')
+          className: styles.darkNavRow
+        }, [
+          h('h2', {}, 'Teams')
+        ])
       ]),
       h(Link, { to: 'Divisions' }, [
         h('div', {
           className: styles.navRow
-        }, 'Divisions')
+        }, [
+          h('h2', {}, 'Divisions')
+        ])
       ])
 
     ])
