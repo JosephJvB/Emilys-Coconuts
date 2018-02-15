@@ -3,10 +3,10 @@ import h from 'react-hyperscript'
 // import { Link } from 'react-router-dom'
 import { connect as connectFela } from 'react-fela'
 
-import styles from '../styles'
-import { homeButton, backButton } from '../components/dumb-components'
+import styles from '../../styles'
+import { homeButton, backButton } from '../../components/dumb-components'
 
-const teamData = require('../../data/teams')
+import teamData from '../../../data/teams'
 
 const SingleTeam = connectFela(styles)(props => {
   const { goBack } = props.history

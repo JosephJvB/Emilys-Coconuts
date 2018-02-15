@@ -5,9 +5,9 @@ import { Route, Switch } from 'react-router-dom'
 import Home from './pages/Home'
 import Season1 from './pages/Season1'
 import Standings from './pages/Standings'
-import TeamsPage from './teams/TeamsPage'
+import TeamsPage from './pages/teams/TeamsPage'
+import SingleTeam from './pages/teams/SingleTeam'
 import Divisions from './pages/Divisions'
-import SingleTeam from './teams/SingleTeam'
 import NoUrlMatch from './pages/NoUrlMatch'
 
 const AppRoutes = () => {
