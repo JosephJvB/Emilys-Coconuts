@@ -19,7 +19,6 @@ const Home = connectFela(styles)(props => {
           href: 'https://www.figma.com/proto/bbCtb1UyXlZln9AHGRYlShJF/Overwatch-League?scaling=contain&node-id=2%3A0&redirected=1'
         }, 'coconuts')
       ]),
-      h('br'),
       h(Link, { to: 'Season1' }, [
         h('div', {
           className: styles.darkNavRow

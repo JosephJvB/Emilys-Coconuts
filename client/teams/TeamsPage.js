@@ -14,7 +14,9 @@ const TeamPage = props => {
   const row3 = teamData.slice(8, 12)
 
   return (
-    h(F, [
+    h('div', {
+      className: styles.container
+    }, [
       h(backButton, { goBack }),
       'im team page',
       h(homeButton),
