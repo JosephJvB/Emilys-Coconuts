@@ -1,15 +1,15 @@
 import { Fragment as F } from 'react'
 import h from 'react-hyperscript'
 import { Link } from 'react-router-dom'
+import { connect as connectFela } from 'react-fela'
 
-import { container, navRow } from '../styles'
+import styles from '../styles'
 
-const rowArr = [ 'Season1', 'Standings', 'Teams', 'Divisions' ]
-
-const Home = () => {
+const Home = connectFela(styles)(props => {
+  const { styles } = props
   return (
     h('div', {
-      style: container
+      className: styles.container
     }, [
       'emily\'s ',
       h('a', {
@@ -18,33 +18,36 @@ const Home = () => {
       h('br'),
       h(Link, { to: 'Season1' }, [
         h('div', {
-          style: navRow
+          className: styles.navRow
         }, 'Season1')
       ]),
       h(Link, { to: 'Standings' }, [
         h('div', {
-          style: navRow
+          className: styles.navRow
         }, 'Standings')
       ]),
       h(Link, { to: 'Teams' }, [
         h('div', {
-          style: navRow
+          className: styles.navRow
         }, 'Teams')
       ]),
       h(Link, { to: 'Divisions' }, [
         h('div', {
-          style: navRow
+          className: styles.navRow
         }, 'Divisions')
       ])
 
     ])
   )
 }
+)
 
 export default Home
 
 // this page starts off as that main picture, then onclick it renders the nav options:
 // Season 1, Standings, Teams, Divisions
+
+// const rowArr = ['Season1', 'Standings', 'Teams', 'Divisions']
 
 // const renderRow = ({rowArr}) => {
 //   console.log(rowArr)
