@@ -5,12 +5,15 @@ import { connect as connectFela } from 'react-fela'
 
 import styles from '../styles'
 
+// import MainNav from '../components/MainNav'
+
 const Home = connectFela(styles)(props => {
   const { styles } = props
   return (
     h('div', {
       className: styles.container
     }, [
+      // h(MainNav),
       h('h1', {
         className: styles.title
       }, [

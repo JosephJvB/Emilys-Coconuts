@@ -13,12 +13,15 @@ module.exports = {
   }),
   navRow: combineRules(navRow, () => ({})),
   darkNavRow: combineRules(navRow, () => ({
-    backgroundColor: 'rgba(218, 222, 229, 0.5)'
+    backgroundColor: '#E0E0E0'
   })),
   title: () => ({
     fontSize: '36px',
     fontWeight: '400',
     padding: '2em'
+  }),
+  navItem: () => ({
+    backgroundColor: 'blue'
   })
 }
 // this styling seems to work. but it's pretty goofy without using combineStyles so I think I'll leave it here..
