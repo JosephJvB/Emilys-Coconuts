@@ -15,6 +15,12 @@ const navItem = () => ({
   width: '100%'
 })
 
+const title = () => ({
+  fontSize: '36px',
+  fontWeight: '400',
+  fontFamily: 'Industry'
+})
+
 module.exports = {
   container: () => ({
     textAlign: 'center'
@@ -23,11 +29,12 @@ module.exports = {
   darkNavRow: combineRules(navRow, () => ({
     backgroundColor: '#E0E0E0'
   })),
-  title: () => ({
-    fontSize: '36px',
-    fontWeight: '400',
+  title: combineRules(title, () => ({
     padding: '1.5em 2em'
-  }),
+  })),
+  subTitle: combineRules(title, () => ({
+    fontSize: '24px'
+  })),
   navItem: combineRules(navItem, () => ({})),
   bigItem: combineRules(navItem, () => ({
     width: '450%'
@@ -60,3 +67,6 @@ module.exports = {
 // this styling seems to work. but it's pretty goofy without using combineStyles so I think I'll leave it here..
 // unless I actually bring react-fela in? Gave it a first crack. need a guide on how to set it up.
 // can probably use it once it's set up. but idk how to do that lol
+
+// TODO: Hide all constants in another file, import them in to do the combine rules :)
+// then once file is larger, split those into seperate style pages

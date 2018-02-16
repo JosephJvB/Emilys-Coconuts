@@ -6,7 +6,7 @@ import { connect as connectFela } from 'react-fela'
 import styles from '../../styles'
 
 import MainNav from '../../components/MainNav'
-import { homeButton, renderTile, backButton } from '../../components/dumb-components'
+import { homeButton, renderTile, backButton, signature } from '../../components/dumb-components'
 
 import teamData from '../../../data/teams'
 // const w = window.screen.availWidth
@@ -33,7 +33,8 @@ const TeamPage = connectFela(styles)(props => {
       ]),
       h('div', { className: 'columns' }, [
         row3.map(team => renderTile(team))
-      ])
+      ]),
+      h(signature)
     ])
   )
 })

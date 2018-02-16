@@ -4,7 +4,7 @@ import { connect as connectFela } from 'react-fela'
 
 import styles from '../styles'
 
-import { homeButton, backButton } from '../components/dumb-components'
+import { homeButton, backButton, signature } from '../components/dumb-components'
 
 const NoUrlMatch = connectFela(styles)(props => {
   const { goBack } = props.history
@@ -13,7 +13,8 @@ const NoUrlMatch = connectFela(styles)(props => {
       'oops that URL doesnt go anywhere useful!',
       h(homeButton),
       ' OR ',
-      h(backButton, { goBack })
+      h(backButton, { goBack }),
+      h(signature)
     ])
   )
 })
