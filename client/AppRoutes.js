@@ -2,6 +2,7 @@ import { Fragment as F } from 'react'
 import h from 'react-hyperscript'
 import { Route, Switch } from 'react-router-dom'
 
+import { pic } from './components/dumb-components'
 import Home from './pages/Home'
 import Season1 from './pages/Season1'
 import Standings from './pages/Standings'
@@ -16,6 +17,11 @@ const AppRoutes = () => {
       h(Switch, [
         h(Route, {
           path: '/',
+          exact: true,
+          component: pic
+        }),
+        h(Route, {
+          path: '/Home',
           exact: true,
           component: Home
         }),

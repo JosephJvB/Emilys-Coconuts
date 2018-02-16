@@ -7,6 +7,14 @@ const navRow = () => ({
   padding: '2em'
 })
 
+const navItem = () => ({
+  backgroundColor: '#E0E0E0',
+  border: '1px solid',
+  borderColor: 'rgba(171, 168, 166, 0.6)',
+  padding: '0.4em 3em',
+  width: '100%'
+})
+
 module.exports = {
   container: () => ({
     textAlign: 'center'
@@ -18,10 +26,35 @@ module.exports = {
   title: () => ({
     fontSize: '36px',
     fontWeight: '400',
-    padding: '2em'
+    padding: '1.5em 2em'
   }),
-  navItem: () => ({
-    backgroundColor: 'blue'
+  navItem: combineRules(navItem, () => ({})),
+  bigItem: combineRules(navItem, () => ({
+    width: '450%'
+  })),
+  smallItem: combineRules(navItem, () => ({
+    width: '30%',
+    color: 'white',
+    cursor: 'pointer'
+  })),
+  mainNav: () => ({
+    display: 'flex',
+    flexDirection: 'row',
+    width: '100%',
+    backgroundColor: 'red'
+  }),
+  sig: () => ({
+    display: 'flex',
+    flexDirection: 'row',
+    padding: '6em 2em',
+    fontSize: '12px'
+  }),
+  pic: () => ({
+    display: 'block',
+    marginRight: 'auto',
+    marginLeft: 'auto',
+    padding: '3em 0',
+    backgroundColor: 'EAEAEA'
   })
 }
 // this styling seems to work. but it's pretty goofy without using combineStyles so I think I'll leave it here..

@@ -5,7 +5,8 @@ import { connect as connectFela } from 'react-fela'
 
 import styles from '../styles'
 
-// import MainNav from '../components/MainNav'
+import MainNav from '../components/MainNav'
+import { signature } from '../components/dumb-components'
 
 const Home = connectFela(styles)(props => {
   const { styles } = props
@@ -13,11 +14,13 @@ const Home = connectFela(styles)(props => {
     h('div', {
       className: styles.container
     }, [
-      // h(MainNav),
+      h(MainNav, { }),
       h('h1', {
         className: styles.title
       }, [
-        'emily\'s ',
+        h('a', {
+          href: 'https://www.figma.com/file/bbCtb1UyXlZln9AHGRYlShJF/Overwatch-League?node-id=98%3A6080'
+        }, 'emily\'s '),
         h('a', {
           href: 'https://www.figma.com/proto/bbCtb1UyXlZln9AHGRYlShJF/Overwatch-League?scaling=contain&node-id=2%3A0&redirected=1'
         }, 'coconuts')
@@ -49,8 +52,8 @@ const Home = connectFela(styles)(props => {
         }, [
           h('h2', {}, 'Divisions')
         ])
-      ])
-
+      ]),
+      h(signature, { })
     ])
   )
 })

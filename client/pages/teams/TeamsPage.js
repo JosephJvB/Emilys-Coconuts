@@ -4,6 +4,8 @@ import h from 'react-hyperscript'
 import { connect as connectFela } from 'react-fela'
 
 import styles from '../../styles'
+
+import MainNav from '../../components/MainNav'
 import { homeButton, renderTile, backButton } from '../../components/dumb-components'
 
 import teamData from '../../../data/teams'
@@ -19,6 +21,7 @@ const TeamPage = connectFela(styles)(props => {
     h('div', {
       className: styles.container
     }, [
+      h(MainNav),
       h(backButton, { goBack }),
       'im team page',
       h(homeButton),

@@ -1,12 +1,24 @@
 import h from 'react-hyperscript'
+import { Fragment as F } from 'react'
 import { Link } from 'react-router-dom'
 import { connect as connectFela } from 'react-fela'
 
 import styles from '../styles'
 
+export const pic = connectFela(styles)(props => {
+  return (
+    h(F, [
+      h(Link, { to: '/Home' }, [
+        h('img', { src: '/images/main.png', className: props.styles.pic })
+      ]),
+      h(signature)
+    ])
+  )
+})
+
 export const homeButton = () => {
   return (
-    h(Link, { to: '/' }, [
+    h(Link, { to: '/Home' }, [
       h('button', 'HOME')
     ])
   )
@@ -31,3 +43,5 @@ export const renderTile = team => {
     ])
   )
 }
+
+export const signature = connectFela(styles)(props => h('p', { className: props.styles.sig }, 'made by some idiot nerd ©'))
