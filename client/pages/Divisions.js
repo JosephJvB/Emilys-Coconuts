@@ -3,19 +3,19 @@ import h from 'react-hyperscript'
 // import { Link } from 'react-router-dom'
 import { connect as connectFela } from 'react-fela'
 
-import styles from '../styles'
+import styles from '../styles/index'
 
 import MainNav from '../components/MainNav'
-import { homeButton, backButton, signature } from '../components/dumb-components'
+import { signature } from '../components/dumb-components'
 
 const Divisions = connectFela(styles)(props => {
-  const { goBack } = props.history
+  const { history: { goBack }, styles } = props
   return (
-    h(F, [
-      h(MainNav),
-      h(backButton, { goBack }),
+    h('div', {
+      className: styles.container
+    }, [
+      h(MainNav, { goBack }),
       'im divisions',
-      h(homeButton),
       h(signature)
     ])
   )

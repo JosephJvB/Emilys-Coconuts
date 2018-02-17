@@ -2,18 +2,17 @@ import { Fragment as F } from 'react'
 import h from 'react-hyperscript'
 import { connect as connectFela } from 'react-fela'
 
-import styles from '../styles'
+import styles from '../styles/index'
 
-import { homeButton, backButton, signature } from '../components/dumb-components'
+import { signature } from '../components/dumb-components'
+import MainNav from '../components/MainNav'
 
 const NoUrlMatch = connectFela(styles)(props => {
   const { goBack } = props.history
   return (
     h(F, [
+      h(MainNav, { goBack }),
       'oops that URL doesnt go anywhere useful!',
-      h(homeButton),
-      ' OR ',
-      h(backButton, { goBack }),
       h(signature)
     ])
   )

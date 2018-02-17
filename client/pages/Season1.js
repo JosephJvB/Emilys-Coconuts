@@ -3,21 +3,21 @@ import h from 'react-hyperscript'
 // import { Link } from 'react-router-dom'
 import { connect as connectFela } from 'react-fela'
 
-import styles from '../styles'
+import styles from '../styles/index'
 
 import MainNav from '../components/MainNav'
-import { homeButton, backButton, signature } from '../components/dumb-components'
+import { signature } from '../components/dumb-components'
 
 const stages = [ 1, 2, 3, 4 ]
 
 const Season1 = connectFela(styles)(props => {
-  const { goBack } = props.history
+  const { history: { goBack }, styles } = props
   return (
-    h(F, [
-      h(MainNav),
-      h(backButton, { goBack }),
+    h('div', {
+      className: styles.container
+    }, [
+      h(MainNav, { goBack }),
       'im season1',
-      h(homeButton),
       h('br'),
       stages.map(s => h('button', { key: s, className: 'button is-large' }, `Stage${s}`)),
       h('br'),

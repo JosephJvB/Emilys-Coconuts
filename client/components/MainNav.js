@@ -3,17 +3,21 @@ import h from 'react-hyperscript'
 import { Link } from 'react-router-dom'
 import { connect as connectFela } from 'react-fela'
 
-import styles from '../styles'
+import styles from '../styles/index'
+import { backButton } from './dumb-components'
 
 const { log } = global.console
 
+// main nav needs to get passed the props to be given to the back button OK FROM ALL PAGES
+// the Overwatch title is messed up on all pages that arent Home... wtf?
+
 const MainNav = connectFela(styles)(props => {
-  const { styles } = props
-  // log(props)
+  const { styles, goBack } = props
   return (
     h('div', {
       className: styles.mainNav
     }, [
+      h(backButton, { goBack, styles }),
       h('div', {
         className: styles.bigItem
       }, 'OVERWATCH'),

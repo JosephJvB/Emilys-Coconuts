@@ -3,23 +3,23 @@ import h from 'react-hyperscript'
 // import { Link } from 'react-router-dom'
 import { connect as connectFela } from 'react-fela'
 
-import styles from '../../styles'
+import styles from '../../styles/index'
 
 import MainNav from '../../components/MainNav'
-import { homeButton, backButton, signature } from '../../components/dumb-components'
+import { signature } from '../../components/dumb-components'
 
 import teamData from '../../../data/teams'
 
 const SingleTeam = connectFela(styles)(props => {
-  const { goBack } = props.history
+  const { history: { goBack }, styles } = props
   const activeTeam = props.match.params.name.replace(/_/g, ' ')
   const activeInfo = teamData.find(team => team.name === activeTeam)
   return (
-    h(F, [
-      h(MainNav),
-      h(backButton, { goBack }),
+    h('div', {
+      className: styles.teamTile
+    }, [
+      h(MainNav, { goBack }),
       activeInfo.name,
-      h(homeButton),
       h(signature)
     ])
   )
