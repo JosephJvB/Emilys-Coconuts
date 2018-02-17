@@ -1,6 +1,6 @@
 import { combineRules } from 'fela'
 
-import { navRow, navItem, title, teamTile, mainNav, sig, pic, container } from './static'
+import { navRow, navItem, title, teamTile, mainNav, sig, pic, container, teamPic, logo } from './static'
 
 module.exports = {
   sig: combineRules(sig, () => ({})),
@@ -29,5 +29,7 @@ module.exports = {
   backNav: combineRules(navItem, () => ({
     width: '10%'
   })),
-  teamTile: combineRules(teamTile, () => ({}))
+  teamTile: combineRules(teamTile, () => ({})),
+  teamPic: combineRules(teamPic, () => ({})),
+  logo: combineRules(logo, () => ({}))
 }

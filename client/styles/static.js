@@ -43,5 +43,13 @@ module.exports = {
     marginLeft: 'auto',
     padding: '3em 0',
     backgroundColor: 'EAEAEA'
+  }),
+  teamPic: () => ({
+    height: '150px',
+    width: '612px'
+  }),
+  logo: () => ({
+    height: '110px',
+    width: '110px'
   })
 }

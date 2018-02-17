@@ -2,7 +2,7 @@ module.exports = [
   {
     name: 'Boston Uprising',
     logo: '/images/logos/uprising.png',
-    photo: '',
+    photo: '/images/teamPhotos/uprising',
     location: 'ATL',
     roster: [
       { name: 'Snow', role: 'support' },
@@ -20,7 +20,7 @@ module.exports = [
   {
     name: 'Dallas Fuel',
     logo: '/images/logos/fuel.png',
-    photo: '',
+    photo: '/images/teamPhotos/fuel.png',
     location: 'PAC',
     roster: [
       { name: 'Mickie', role: 'fill' },
@@ -37,7 +37,7 @@ module.exports = [
   {
     name: 'Florida Mayhem',
     logo: '/images/logos/mayhem.png',
-    photo: '',
+    photo: '/images/teamPhotos/mayhem.png',
     location: 'PAC',
     roster: [
       { name: 'Manneten', role: 'fill' },
@@ -51,7 +51,7 @@ module.exports = [
   {
     name: 'Houston Outlaws',
     logo: '/images/logos/outlaws.png',
-    photo: '',
+    photo: '/images/teamPhotos/outlaws.png',
     location: 'ATL',
     roster: [
       { name: 'Muma', role: 'tank' },
@@ -69,7 +69,7 @@ module.exports = [
   {
     name: 'London Spitfire',
     logo: '/images/logos/spitfire.png',
-    photo: '',
+    photo: '/images/teamPhotos/spitfire.png',
     location: 'ATL',
     roster: [
       { name: 'Gesture', role: 'tank' },
@@ -89,7 +89,7 @@ module.exports = [
   {
     name: 'Los Angeles Gladiators',
     logo: '/images/logos/gladiators.png',
-    photo: '',
+    photo: '/images/teamPhotos/gladiators.png',
     location: 'PAC',
     roster: [
       { name: 'Asher', role: 'dps' },
@@ -104,7 +104,7 @@ module.exports = [
   {
     name: 'Los Angeles Valiant',
     logo: '/images/logos/valiant.png',
-    photo: '',
+    photo: '/images/teamPhotos/valiant.png',
     location: 'PAC',
     roster: [
       { name: 'Silkthread', role: 'dps' },
@@ -123,7 +123,7 @@ module.exports = [
   {
     name: 'New York Excelsior',
     logo: '/images/logos/excelsior.png',
-    photo: '',
+    photo: '/images/teamPhotos/excelsior.png',
     location: 'ATL',
     roster: [
       { name: 'Saebyeolbe', role: 'dps' },
@@ -139,7 +139,7 @@ module.exports = [
   {
     name: 'Philadelphia Fusion',
     logo: '/images/logos/fusion.png',
-    photo: '',
+    photo: '/images/teamPhotos/fusion.png',
     location: 'ATL',
     roster: [
       { name: 'Joemeister', role: 'support' },
@@ -159,7 +159,7 @@ module.exports = [
   {
     name: 'San Francisco Shock',
     logo: '/images/logos/shock.png',
-    photo: '',
+    photo: '/images/teamPhotos/shock.png',
     location: 'PAC',
     roster: [
       { name: 'super', role: 'fill' },
@@ -176,7 +176,7 @@ module.exports = [
   {
     name: 'Seoul Dynasty',
     logo: '/images/logos/dynasty.png',
-    photo: '',
+    photo: '/images/teamPhotos/dynasty.png',
     location: 'PAC',
     roster: [
       { name: 'Bunny', role: 'dps' },
@@ -195,7 +195,7 @@ module.exports = [
   {
     name: 'Shanghai Dragons',
     logo: '/images/logos/dragons.png',
-    photo: '',
+    photo: '/images/teamPhotos/dragons.png',
     location: 'PAC',
     roster: [
       { name: 'Freefeel', role: 'support' },

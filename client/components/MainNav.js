@@ -26,17 +26,17 @@ const MainNav = connectFela(styles)(props => {
           className: styles.navItem
         }, 'HOME')
       ]),
-      h(Link, { to: 'Standings' }, [
+      h(Link, { to: '/Standings' }, [
         h('div', {
           className: styles.navItem
         }, 'STANDINGS')
       ]),
-      h(Link, { to: 'Teams' }, [
+      h(Link, { to: '/Teams' }, [
         h('div', {
           className: styles.navItem
         }, 'TEAMS')
       ]),
-      h(Link, { to: 'Season1' }, [
+      h(Link, { to: '/Season1' }, [
         h('div', {
           className: styles.navItem
         }, 'SEASON1')
