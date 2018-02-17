@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { HashRouter as Router } from 'react-router-dom'
+import { BrowserRouter as Router } from 'react-router-dom'
 import { createRenderer } from 'fela'
 import { Provider as felaProvider } from 'react-fela'
 // import prefixer from 'fela-plugin-prefixer'

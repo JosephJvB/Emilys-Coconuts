@@ -29,28 +29,28 @@ const Home = connectFela(styles)(props => {
         h('div', {
           className: styles.darkNavRow
         }, [
-          h('h2', {}, 'Season1')
+          h('h2', { className: styles.subTitle }, 'Season1')
         ])
       ]),
       h(Link, { to: 'Standings' }, [
         h('div', {
           className: styles.navRow
         }, [
-          h('h2', {}, 'Standings')
+          h('h2', { className: styles.subTitle }, 'Standings')
         ])
       ]),
       h(Link, { to: 'Teams' }, [
         h('div', {
           className: styles.darkNavRow
         }, [
-          h('h2', {}, 'Teams')
+          h('h2', { className: styles.subTitle }, 'Teams')
         ])
       ]),
       h(Link, { to: 'Divisions' }, [
         h('div', {
           className: styles.navRow
         }, [
-          h('h2', {}, 'Divisions')
+          h('h2', { className: styles.subTitle }, 'Divisions')
         ])
       ]),
       h(signature, { })

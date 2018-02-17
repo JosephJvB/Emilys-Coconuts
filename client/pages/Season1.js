@@ -6,7 +6,7 @@ import { connect as connectFela } from 'react-fela'
 import styles from '../styles'
 
 import MainNav from '../components/MainNav'
-import { homeButton, backButton } from '../components/dumb-components'
+import { homeButton, backButton, signature } from '../components/dumb-components'
 
 const stages = [ 1, 2, 3, 4 ]
 
@@ -20,7 +20,8 @@ const Season1 = connectFela(styles)(props => {
       h(homeButton),
       h('br'),
       stages.map(s => h('button', { key: s, className: 'button is-large' }, `Stage${s}`)),
-      h('br')
+      h('br'),
+      h(signature)
     ])
   )
 })

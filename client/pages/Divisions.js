@@ -6,7 +6,7 @@ import { connect as connectFela } from 'react-fela'
 import styles from '../styles'
 
 import MainNav from '../components/MainNav'
-import { homeButton, backButton } from '../components/dumb-components'
+import { homeButton, backButton, signature } from '../components/dumb-components'
 
 const Divisions = connectFela(styles)(props => {
   const { goBack } = props.history
@@ -15,7 +15,8 @@ const Divisions = connectFela(styles)(props => {
       h(MainNav),
       h(backButton, { goBack }),
       'im divisions',
-      h(homeButton)
+      h(homeButton),
+      h(signature)
     ])
   )
 })

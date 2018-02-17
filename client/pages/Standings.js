@@ -6,7 +6,7 @@ import { connect as connectFela } from 'react-fela'
 import styles from '../styles'
 
 import MainNav from '../components/MainNav'
-import { homeButton, backButton } from '../components/dumb-components'
+import { homeButton, backButton, signature } from '../components/dumb-components'
 
 const Standings = connectFela(styles)(props => {
   const { goBack } = props.history
@@ -17,7 +17,8 @@ const Standings = connectFela(styles)(props => {
       'im standings',
       h(homeButton),
       h('br'),
-      'Im gonna be a lovely table :)'
+      'Im gonna be a lovely table :)',
+      h(signature)
     ])
   )
 })

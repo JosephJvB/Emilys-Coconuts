@@ -6,7 +6,7 @@ import { connect as connectFela } from 'react-fela'
 import styles from '../../styles'
 
 import MainNav from '../../components/MainNav'
-import { homeButton, backButton } from '../../components/dumb-components'
+import { homeButton, backButton, signature } from '../../components/dumb-components'
 
 import teamData from '../../../data/teams'
 
@@ -19,7 +19,8 @@ const SingleTeam = connectFela(styles)(props => {
       h(MainNav),
       h(backButton, { goBack }),
       activeInfo.name,
-      h(homeButton)
+      h(homeButton),
+      h(signature)
     ])
   )
 })
