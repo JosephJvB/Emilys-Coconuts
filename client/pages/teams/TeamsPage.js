@@ -3,10 +3,10 @@ import h from 'react-hyperscript'
 // import { Link } from 'react-router-dom'
 import { connect as connectFela } from 'react-fela'
 
-import styles from '../../styles'
+import styles from '../../styles/index'
 
 import MainNav from '../../components/MainNav'
-import { homeButton, renderTile, backButton, signature } from '../../components/dumb-components'
+import { renderTile, signature } from '../../components/dumb-components'
 
 import teamData from '../../../data/teams'
 // const w = window.screen.availWidth
@@ -21,18 +21,16 @@ const TeamPage = connectFela(styles)(props => {
     h('div', {
       className: styles.container
     }, [
-      h(MainNav),
-      h(backButton, { goBack }),
+      h(MainNav, { goBack }),
       'im team page',
-      h(homeButton),
       h('div', { className: 'columns' }, [
-        row1.map(team => renderTile(team))
+        row1.map((team, i) => h(renderTile, { key: i, team }))
       ]),
       h('div', { className: 'columns' }, [
-        row2.map(team => renderTile(team))
+        row2.map((team, i) => h(renderTile, { key: i, team }))
       ]),
       h('div', { className: 'columns' }, [
-        row3.map(team => renderTile(team))
+        row3.map((team, i) => h(renderTile, { key: i, team }))
       ]),
       h(signature)
     ])
