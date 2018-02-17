@@ -17,7 +17,7 @@ const MainNav = connectFela(styles)(props => {
       h('div', {
         className: styles.bigItem
       }, 'OVERWATCH'),
-      h(Link, { to: '/' }, [
+      h(Link, { to: '/Home' }, [
         h('div', {
           className: styles.navItem
         }, 'HOME')
