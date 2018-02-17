@@ -19,7 +19,9 @@ const SingleTeam = connectFela(styles)(props => {
       className: styles.teamTile
     }, [
       h(MainNav, { goBack }),
+      h('img', { src: activeInfo.logo, className: styles.logo }),
       activeInfo.name,
+      h('img', { src: activeInfo.photo, className: styles.teamPic }),
       h(signature)
     ])
   )
