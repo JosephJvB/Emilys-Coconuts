@@ -16,7 +16,7 @@ const SingleTeam = connectFela(styles)(props => {
   const activeInfo = teamData.find(team => team.name === activeTeam)
   return (
     h('div', {
-      className: styles.teamTile
+      className: styles.container
     }, [
       h(MainNav, { goBack }),
       h('img', { src: activeInfo.logo, className: styles.logo }),

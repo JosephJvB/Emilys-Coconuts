@@ -34,6 +34,8 @@
     "fela-plugin-fallback-value": "^5.0.16",
     "fela-plugin-prefixer": "^5.0.16",
     "jsx-loader": "^0.13.2",
+    "material-ui": "^1.0.0-beta.30",
+    "material-ui-icons": "^1.0.0-beta.17",
     "nodemon": "^1.11.0",
     "react": "16.2.0",
     "react-dom": "^16.2.0",
