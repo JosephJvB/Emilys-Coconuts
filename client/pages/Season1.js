@@ -11,9 +11,11 @@ import { signature } from '../components/dumb-components'
 const stages = [ 1, 2, 3, 4 ]
 
 const Season1 = connectFela(styles)(props => {
-  const { goBack } = props.history
+  const { history: { goBack }, styles } = props
   return (
-    h(F, [
+    h('div', {
+      className: styles.container
+    }, [
       h(MainNav, { goBack }),
       'im season1',
       h('br'),

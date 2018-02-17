@@ -9,9 +9,11 @@ import MainNav from '../components/MainNav'
 import { signature } from '../components/dumb-components'
 
 const Standings = connectFela(styles)(props => {
-  const { goBack } = props.history
+  const { history: { goBack }, styles } = props
   return (
-    h(F, [
+    h('div', {
+      className: styles.container
+    }, [
       h(MainNav, { goBack }),
       'im standings',
       h('br'),

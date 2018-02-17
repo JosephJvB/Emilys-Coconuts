@@ -11,11 +11,13 @@ import { signature } from '../../components/dumb-components'
 import teamData from '../../../data/teams'
 
 const SingleTeam = connectFela(styles)(props => {
-  const { goBack } = props.history
+  const { history: { goBack }, styles } = props
   const activeTeam = props.match.params.name.replace(/_/g, ' ')
   const activeInfo = teamData.find(team => team.name === activeTeam)
   return (
-    h(F, [
+    h('div', {
+      className: styles.teamTile
+    }, [
       h(MainNav, { goBack }),
       activeInfo.name,
       h(signature)
