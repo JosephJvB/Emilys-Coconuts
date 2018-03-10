@@ -17,11 +17,20 @@ main nav has 4 headings:
 * Divisions
   - Atlantic / Pacific, links to team pages.
 
-  get it basic first then add in functionality. searches that sort of stuff
+---
 
-  Maybe what I do is make a folder for each 4 main topics, then have components, pages within those? I do like Minded's organization structure.
+  ## TODO: //
+  * make theme
+  * redo styles formatting.
+      - All to one page [x] DONE
+      - split that one into few files based on what page/component they style
+
+---
+  get it basic first then add in functionality. searches that sort of stuff
 
   Standings is just a single thing so maybe it doesnt need it.
   Seasons is kinda big... idk
 
-  TODO: GO hard in the paint on Fela: that might mean having more than one styles file...jk lol that would require more brainpower AAEEEEIIOOOUUUUU
+  The way im displaying the team-tiles is not ideal tbh
+
+  Maybe for singleTeam view I save data on how large each photo / logo is.

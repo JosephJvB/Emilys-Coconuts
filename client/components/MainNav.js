@@ -8,16 +8,24 @@ import { backButton } from './dumb-components'
 
 const { log } = global.console
 
-// main nav needs to get passed the props to be given to the back button OK FROM ALL PAGES
-// the Overwatch title is messed up on all pages that arent Home... wtf?
+// main nav gets props from all pages
+// the goBack function it's using will mean wipe any info on previous active page
+// shouldnt be anything to save on front end so allg
 
 const MainNav = connectFela(styles)(props => {
-  const { styles, goBack } = props
+  const {
+    goBack,
+    pathname,
+    styles
+  } = props
+
+  const isHome = pathname === '/Home'
+
   return (
     h('div', {
       className: styles.mainNav
     }, [
-      h(backButton, { goBack, styles }),
+      !isHome && h(backButton, { goBack, styles }),
       h('div', {
         className: styles.bigItem
       }, 'OVERWATCH'),

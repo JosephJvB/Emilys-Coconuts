@@ -9,10 +9,11 @@ import MainNav from '../../components/MainNav'
 import { renderTile, signature } from '../../components/dumb-components'
 
 import teamData from '../../../data/teams'
-// const w = window.screen.availWidth
 
 const TeamPage = connectFela(styles)(props => {
+//
   const { history: { goBack }, styles } = props
+
   const row1 = teamData.slice(0, 4)
   const row2 = teamData.slice(4, 8)
   const row3 = teamData.slice(8, 12)

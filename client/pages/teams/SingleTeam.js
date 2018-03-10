@@ -12,16 +12,20 @@ import teamData from '../../../data/teams'
 
 const SingleTeam = connectFela(styles)(props => {
   const { history: { goBack }, styles } = props
+
   const activeTeam = props.match.params.name.replace(/_/g, ' ')
   const activeInfo = teamData.find(team => team.name === activeTeam)
+
+  const { logo, photo, name } = activeInfo
+
   return (
     h('div', {
       className: styles.container
     }, [
       h(MainNav, { goBack }),
-      h('img', { src: activeInfo.logo, className: styles.logo }),
-      activeInfo.name,
-      h('img', { src: activeInfo.photo, className: styles.teamPic }),
+      h('img', { src: logo, className: styles.logo }),
+      name,
+      h('img', { src: photo, className: styles.teamPic }),
       h(signature)
     ])
   )

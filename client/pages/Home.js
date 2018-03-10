@@ -9,12 +9,17 @@ import MainNav from '../components/MainNav'
 import { signature } from '../components/dumb-components'
 
 const Home = connectFela(styles)(props => {
-  const { history: { goBack }, styles } = props
+  const {
+    history: { goBack },
+    location: { pathname },
+    styles
+  } = props
+
   return (
     h('div', {
       className: styles.container
     }, [
-      h(MainNav, { goBack }),
+      h(MainNav, { goBack, pathname }),
       h('h1', {
         className: styles.title
       }, [
@@ -29,28 +34,28 @@ const Home = connectFela(styles)(props => {
         h('div', {
           className: styles.darkNavRow
         }, [
-          h('h2', { className: styles.subTitle }, 'Season1')
+          h('h2', { className: styles.subTitle }, 'SEASON1')
         ])
       ]),
       h(Link, { to: 'Standings' }, [
         h('div', {
           className: styles.navRow
         }, [
-          h('h2', { className: styles.subTitle }, 'Standings')
+          h('h2', { className: styles.subTitle }, 'STANDINGS')
         ])
       ]),
       h(Link, { to: 'Teams' }, [
         h('div', {
           className: styles.darkNavRow
         }, [
-          h('h2', { className: styles.subTitle }, 'Teams')
+          h('h2', { className: styles.subTitle }, 'TEAMS')
         ])
       ]),
       h(Link, { to: 'Divisions' }, [
         h('div', {
           className: styles.navRow
         }, [
-          h('h2', { className: styles.subTitle }, 'Divisions')
+          h('h2', { className: styles.subTitle }, 'DIVISIONS')
         ])
       ]),
       h(signature, { })
