@@ -3,7 +3,7 @@ import h from 'react-hyperscript'
 // import { Link } from 'react-router-dom'
 import { connect as connectFela } from 'react-fela'
 
-import styles from '../../styles/index'
+import styles from '../../styles/teams'
 
 import MainNav from '../../components/MainNav'
 import { signature } from '../../components/dumb-components'

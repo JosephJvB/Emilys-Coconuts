@@ -3,7 +3,7 @@ import h from 'react-hyperscript'
 import { Link } from 'react-router-dom'
 import { connect as connectFela } from 'react-fela'
 
-import styles from '../styles/index'
+import styles from '../styles/home'
 
 import MainNav from '../components/MainNav'
 import { signature } from '../components/dumb-components'
@@ -32,28 +32,28 @@ const Home = connectFela(styles)(props => {
       ]),
       h(Link, { to: 'Season1' }, [
         h('div', {
-          className: styles.darkNavRow
+          className: styles.darkHomeItem
         }, [
           h('h2', { className: styles.subTitle }, 'SEASON1')
         ])
       ]),
       h(Link, { to: 'Standings' }, [
         h('div', {
-          className: styles.navRow
+          className: styles.homeItem
         }, [
           h('h2', { className: styles.subTitle }, 'STANDINGS')
         ])
       ]),
       h(Link, { to: 'Teams' }, [
         h('div', {
-          className: styles.darkNavRow
+          className: styles.darkHomeItem
         }, [
           h('h2', { className: styles.subTitle }, 'TEAMS')
         ])
       ]),
       h(Link, { to: 'Divisions' }, [
         h('div', {
-          className: styles.navRow
+          className: styles.homeItem
         }, [
           h('h2', { className: styles.subTitle }, 'DIVISIONS')
         ])

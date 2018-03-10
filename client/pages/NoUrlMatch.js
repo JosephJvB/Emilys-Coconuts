@@ -2,7 +2,7 @@ import { Fragment as F } from 'react'
 import h from 'react-hyperscript'
 import { connect as connectFela } from 'react-fela'
 
-import styles from '../styles/index'
+import styles from '../styles/home'
 
 import { signature } from '../components/dumb-components'
 import MainNav from '../components/MainNav'

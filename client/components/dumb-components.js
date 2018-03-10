@@ -3,7 +3,7 @@ import { Fragment as F } from 'react'
 import { Link } from 'react-router-dom'
 import { connect as connectFela } from 'react-fela'
 
-import styles from '../styles/index'
+import styles from '../styles/home'
 
 const { log } = global.console
 
